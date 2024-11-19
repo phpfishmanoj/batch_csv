@@ -29,8 +29,6 @@ to start queue job
 
 ![image](https://github.com/user-attachments/assets/bd8a2197-968f-421e-9f64-646dca978e9a)
 
-![image](https://github.com/user-attachments/assets/26f4df28-932e-4512-8f93-7d31765db8d4)
-
 ![image](https://github.com/user-attachments/assets/2fe610c7-2001-448e-8365-0212185bee52)
 
 ![image](https://github.com/user-attachments/assets/1c74002d-d0cc-401f-bd73-fb569443ab1f)
