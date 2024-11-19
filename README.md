@@ -14,6 +14,8 @@
 
 frontend start with local url ## http://localhost:3000/upload
 
+![image](https://github.com/user-attachments/assets/9aedc868-732a-401c-a918-638183779811)
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
