@@ -17,6 +17,16 @@ frontend start with local url ## http://localhost:3000/upload
 ![image](https://github.com/user-attachments/assets/9aedc868-732a-401c-a918-638183779811)
 
 ## Laravel
+- Open the .env file and set the queue driver:
+QUEUE_CONNECTION=database
+
+This example uses the database driver, but you can also choose redis, beanstalkd, sqs, or others depending on your preference.
+If you're using the database driver, you need to create a table for storing job data. You can create this table by running:
+
+- php artisan queue:table
+- php artisan migrate
+
+- php artisan make:job JobBatchUploadFileDataProcess
 
 - /c/xampp/htdocs/batch_csv 
 - php artisan serve
@@ -24,8 +34,22 @@ frontend start with local url ## http://localhost:3000/upload
 backend start with local url ## http://localhost:8000/
 
 - /c/xampp/htdocs/batch_csv
-- php artisan queue:work
 to start queue job 
+- php artisan queue:work
+To check the list of failed jobs:
+- php artisan queue:failed
+To retry failed jobs:
+- php artisan queue:retry all
+To delete all failed jobs:
+- php artisan queue:flush
+You can also specify a delay before the job is executed. For example:
+$user = User::findOrFail($userId);
+JobBatchUploadFileDataProcess::dispatch($user)->delay(now()->addMinutes(10));
+or
+JobBatchUploadFileDataProcess::bus($user)->delay(now()->addMinutes(10));
+
+Controller: UploadFileChunkController
+Method: BatchUploadFileProcess
 
 ![image](https://github.com/user-attachments/assets/bd8a2197-968f-421e-9f64-646dca978e9a)
 
